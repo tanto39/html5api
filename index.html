@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/da96e53cb8.js" crossorigin="anonymous" defer></script>
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Путеводитель</title>
+  </head>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top topmenu">
+      <div class="container-lg">
+        <div class="d-flex align-items-center menu-brand">
+          <a class="navbar-brand m-2" href="#">Путеводитель</a>
+        </div>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topmenu-links" aria-controls="topmenu-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="topmenu-links">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item menu-item">
+              <a class="nav-link" href="#main">Описание</a>
+            </li>
+            <li class="nav-item menu-item">
+              <a class="nav-link" href="#map">Карта</a>
+            </li>
+            <li class="nav-item menu-item">
+              <a class="nav-link" href="#weather">Погода</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="section-color"></div>
+      <div class="container-md p-3 mt-5">
+        <main class="row section mt-5" id="main">
+          <h1 class="display-6 line-top pt-2">Добро пожаловать в путеводитель.</h1>
+          <div class="col-12 p-3">
+              <p>Текст</p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="container-md">
+      <section class="row section mt-2" id="map">
+        <h2 class="display-6 line-top">Карта</h2>
+        <div class="col-12 p-3">
+          
+        </div>
+      </section>
+    </div>
+
+    <div class="section-color">
+      <section class="container-md section mt-3" id="weather">
+        <h2 class="display-6 pt-2">Погода</h2>
+        <div class="weather">
+          
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container-md p-3 footer-cont">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="d-flex align-items-center footer-brand">
+              <div class="footer-brand__link">Путеводитель</div>
+            </a>
+            <div>+7(920)333-33-33</div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-md-center mt-2">
+            <ul>
+              <li>
+                <a href="#main">Описание</a>
+              </li>
+              <li>
+                <a href="#map">Карта</a>
+              </li>
+              <li>
+                <a href="#weather">Погода</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 d-flex justify-content-md-end">© 2024, Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

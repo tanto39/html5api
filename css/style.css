@@ -1,0 +1,60 @@
+a {
+  text-decoration: none;
+}
+
+/*--- topmenu ---*/
+.topmenu, .footer {
+  background: #626584;
+}
+.topmenu.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+.topmenu.navbar-dark .navbar-nav .nav-link:hover, .topmenu.navbar-dark .navbar-nav .nav-link:focus {
+  color: #cccccc;
+}
+.menu-brand, .menu-brand>a{
+  font-size: 1.5rem;
+}
+.menu-item {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+}
+
+/*--- section ---*/
+.section {
+  font-size: 1.3rem;
+  scroll-margin-top: 5rem;
+}
+.section-color{
+  background: #e1e1ec;
+}
+.section h1, .section h2 {
+  text-align: center;
+}
+.line-top {
+  border-top: 1px solid #757898;
+}
+
+/*--- footer ---*/
+.footer, .footer a {
+  color: #ffffff;
+}
+.footer a:hover {
+  color: #cccccc;
+}
+.footer {
+  font-size: 1.2rem;
+}
+.footer-brand {
+  font-size: 1.4rem;
+}
+.footer-brand__link {
+  margin-left: 0.3em;
+}
+
+@media all and (max-width: 1200px){
+	.menu-item{ margin-left: 0.5rem; }
+}
+@media all and (max-width: 976px){
+  .form{ padding: 0; }
+}
