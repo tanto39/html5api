@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/da96e53cb8.js" crossorigin="anonymous" defer></script>
     <script src="./js/bootstrap.bundle.min.js" defer></script>
-    <script src="./js/scripts.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1c4f3664-07ba-4903-964b-6027590af5b3&lang=ru_RU" defer></script>
+    <script src="./js/map.js" defer></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <title>Путеводитель</title>
@@ -25,7 +26,7 @@
               <a class="nav-link" href="#main">Описание</a>
             </li>
             <li class="nav-item menu-item">
-              <a class="nav-link" href="#map">Карта</a>
+              <a class="nav-link" href="#map-block">Карта</a>
             </li>
             <li class="nav-item menu-item">
               <a class="nav-link" href="#weather">Погода</a>
@@ -38,19 +39,25 @@
     <div class="section-color"></div>
       <div class="container-md p-3 mt-5">
         <main class="row section mt-5" id="main">
-          <h1 class="display-6 line-top pt-2">Добро пожаловать в путеводитель.</h1>
+          <h1 class="display-6 line-top pt-2">Добро пожаловать в путеводитель!</h1>
           <div class="col-12 p-3">
-              <p>Текст</p>
+            <p>Ваше текущее местоположение будет определено и отображено на карте.</p>
+            <p>Будет отражено место вашего последнего местоположения отдельной меткой.</p>
+            <p>Вы можете добавлять маркеры на карту, задавая им название и строить маршруты до маркеров.</p>
+            <p>На карте отображены достопримечательности, рестораны, магазины и другие интересные места.</p>
+            <p>Вы можете искать нужное вам место в поле поиска.</p>
+            <p>В блоке с погодой отображена информация по погоде.</p>
+            <p></p>
           </div>
         </main>
       </div>
     </div>
 
     <div class="container-md">
-      <section class="row section mt-2" id="map">
+      <section class="row section mt-2" id="map-block">
         <h2 class="display-6 line-top">Карта</h2>
         <div class="col-12 p-3">
-          
+          <div id="map" class="map"></div>
         </div>
       </section>
     </div>
