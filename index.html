@@ -7,6 +7,8 @@
     <script src="./js/bootstrap.bundle.min.js" defer></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1c4f3664-07ba-4903-964b-6027590af5b3&lang=ru_RU" defer></script>
     <script src="./js/map.js" defer></script>
+    <script src="./js/weater.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <title>Путеводитель</title>
@@ -29,7 +31,10 @@
               <a class="nav-link" href="#map-block">Карта</a>
             </li>
             <li class="nav-item menu-item">
-              <a class="nav-link" href="#weather">Погода</a>
+              <a class="nav-link" href="#weather-wrap">Погода</a>
+            </li>
+            <li class="nav-item menu-item">
+              <a class="nav-link" href="#gallery-block">Фотогалерея</a>
             </li>
           </ul>
         </div>
@@ -42,8 +47,12 @@
           <h1 class="display-6 line-top pt-2">Добро пожаловать в путеводитель!</h1>
           <div class="col-12 p-3">
             <p>Ваше текущее местоположение будет определено и отображено на карте.</p>
-            <p>Будет отражено место вашего последнего местоположения отдельной меткой.</p>
-            <p>Вы можете добавлять маркеры на карту, задавая им название и строить маршруты до маркеров.</p>
+            <p>Будет отражено место вашего последнего местоположения отдельной меткой</p>
+            <p>Вы можете добавлять маркеры на карту, для которых автоматически проставится дата и время. 
+              Созданные маркеры подтянутся автоматически при обновлении страницы. 
+              Удалить добавленный вручную маркер можно кликнув правой кнопкой мыши по маркеру.</p>
+            <p>Для построения маршрута между добавленными метками, текущим и последним местоположениями, кликните на одну метку, потом на другую, и между ними построится маршрут.</p>
+            <p>Вы можете строить маршруты между любыми точками в блоке "Маршруты".</p>
             <p>На карте отображены достопримечательности, рестораны, магазины и другие интересные места.</p>
             <p>Вы можете искать нужное вам место в поле поиска.</p>
             <p>В блоке с погодой отображена информация по погоде.</p>
@@ -63,10 +72,34 @@
     </div>
 
     <div class="section-color">
-      <section class="container-md section mt-3" id="weather">
+      <section class="container-md section mt-3" id="weather-wrap">
         <h2 class="display-6 pt-2">Погода</h2>
-        <div class="weather">
-          
+        <div class="col-12 p-3"> 
+          <div id="weather-container">
+            <div id="weather-icon"></div>
+            <p class="location"></p>
+            <p class="weather"></p>
+            <p class="temperature"></p>
+            <p class="temperature_feels"></p>
+            <p class="pressure"></p>
+            <p class="wind"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container-md">
+      <section class="row section mt-2" id="gallery-block">
+        <h2 class="display-6 line-top">Фотогалерея</h2>
+        <div class="col-12 p-3">
+          <input type="file" class="btn btn-success gallery-btn" id="file-input" multiple>
+          <div id="gallery"></div>
+
+          <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+          </div>
+    
         </div>
       </section>
     </div>
@@ -86,10 +119,13 @@
                 <a href="#main">Описание</a>
               </li>
               <li>
-                <a href="#map">Карта</a>
+                <a href="#map-block">Карта</a>
               </li>
               <li>
-                <a href="#weather">Погода</a>
+                <a href="#weather-wrap">Погода</a>
+              </li>
+              <li>
+                <a href="#gallery-block">Фотогалерея</a>
               </li>
             </ul>
           </div>
